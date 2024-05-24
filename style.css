@@ -1,0 +1,155 @@
+.icon {
+--icon-dimensions: 150px;
+position: relative;
+width: var(--icon-dimensions);
+height: var(--icon-dimensions);
+}
+.pumpkin {
+--tail-color: #24AE5F;
+--body-color--main: #e57e25;
+--body-color--light: #F29C1F;
+--bleak-color: #FAC176;
+--mouth-color: #802f34;
+--nose-color: #802f34;
+--eyes-color: #802f34;
+--brows-color: #d25627;
+--teeth-color: var(--body-color--light);
+}
+.pumpkin__tail {
+position: absolute;
+top: 8%;
+left: 50%;
+width: 15%;
+height: 30%;
+transform: translateX(-50%)  rotate(-33deg);
+background: var(--tail-color);
+border-radius: 100% 0% 100% 60% / 100% 0% 100% 0%;
+}  
+.pumpkin__main {
+position: absolute;
+top: 22%;
+width: 100%;
+height: 78%;
+}
+.pumpkin__body {
+position: relative;
+height: 100%;
+}
+.pumpkin__body:before,
+.pumpkin__body:after {
+position: absolute;
+top: 0;
+display: block;
+width: 55%;
+height: 100%;
+content: '';
+background-color: var(--body-color--main);
+border-radius: 50%;
+z-index: 1;
+}
+.pumpkin__body:after {
+right: 0;
+}
+.pumpkin__body-inner {
+position: absolute;
+left: 50%;
+width: 49%;
+height: 100%;
+transform: translateX(-50%);
+background-color: var(--body-color--light);
+border-radius: 50%;
+z-index: 2;
+}
+.pumpkin__bleak {
+position: absolute;
+left: 33%;
+top: 13%;
+height: 20%;
+width: 20%;
+transform: rotate(33deg);
+border: 6px solid transparent;
+border-left-color: var(--bleak-color);
+border-radius: 100px;
+z-index: 3;
+}
+.pumpkin__face {
+position: absolute;
+top: 30%;
+left: 50%;
+width: 62%;
+height: 56%;
+transform: translateX(-50%);
+z-index: 4;
+}
+.pumpkin__eyes-nose {
+height: 40%;
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+}
+.pumpkin__mouth {
+position: relative;
+top: 15%;
+width: 50%;
+height: 45%;
+margin: auto;
+background-color: var(--mouth-color);
+border-radius: 96% 0% 51% 49% / 0% 0% 100% 100%;
+}
+.pumpkin__mouth:before,
+.pumpkin__mouth:after {
+--teeth-offset: 15%;
+position: absolute;
+top: 0;
+width: 15%;
+height: 20%;
+display: block;
+content: '';
+background-color: var(--teeth-color);
+border-radius: 0 0 50px 50px;
+}
+.pumpkin__mouth:before {
+left: var(--teeth-offset);
+}
+.pumpkin__mouth:after {
+right: var(--teeth-offset);
+}
+.pumpkin__eye {  
+position: relative;
+width: 24%;
+height: 100%;
+}
+.pumpkin__eye:before {
+position: absolute;
+display: block;
+width: 110%;
+height: 30%;
+content: '';
+background-color: var(--brows-color);
+border-radius: 50px;
+z-index: 5;
+}
+.pumpkin__eye--left:before {
+transform: rotate(28deg) translate(8%, -32%);
+}
+.pumpkin__eye--right:before {  
+transform: rotate(-28deg) translate(-8%, -32%);
+}
+.pumpkin__eye:after {
+position: absolute;
+left: 50%;
+display: block;
+width: 80%;
+height: 100%;
+transform: translateX(-50%);
+content: '';
+background-color: var(--eyes-color);
+border-radius: 50%;
+}
+.pumpkin__nose {
+width: 12%;
+height: 40%;
+background-color: var(--nose-color);
+border-radius: 100% 100% 100% 100% / 100% 0% 100% 100%;
+transform: rotate(-46deg);
+}
